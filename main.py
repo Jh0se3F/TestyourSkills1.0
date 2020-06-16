@@ -38,10 +38,8 @@ inimigo2_y = 0
 inimigo2_velocidade = 20
 inimigo2_imagem = pygame.image.load('sprites/inimigo.png')
 
-
 #pontos
 pontos = 0
-
 
 #funções
 #desenhar na tela
@@ -101,9 +99,6 @@ def colision():
     elif inimigo2_y > 770 and player_x + 50 > inimigo2_x > player_x - 50:    
         pontos -= 50
         inimigo2_y = -20
-        
-
-
 
 while 1:
     fps.tick(60)
@@ -119,12 +114,6 @@ while 1:
                 player_x -= player_velocidade
             elif event.key == pygame.K_d or event.key == pygame.K_RIGHT:
                 player_x += player_velocidade
-
-
-
-
-
-
 
     if inimigo_x < player_x:
         inimigo_x += 2
